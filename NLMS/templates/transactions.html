@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3>Transactions</h3>
+  <table class="table table-sm">
+    <thead><tr><th>ID</th><th>Book</th><th>Student</th><th>Issued</th><th>Due</th><th>Returned</th><th>Fine</th></tr></thead>
+    <tbody>
+      {% for t in txs %}
+      <tr>
+        <td>{{ t['id'] }}</td>
+        <td>{{ t['title'] }}</td>
+        <td>{{ t['student_name'] }}</td>
+        <td>{{ t['issued_at'][:10] if t['issued_at'] else '' }}</td>
+        <td>{{ t['due_date'] }}</td>
+        <td>{{ t['returned_at'][:10] if t['returned_at'] else '' }}</td>
+        <td>{{ t['fine'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

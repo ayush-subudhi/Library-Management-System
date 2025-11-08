@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3>Issue Book</h3>
+  <form method="post">
+    <div class="mb-3"><label>Book</label>
+      <select class="form-select" name="book_id" required>
+        {% for b in books %}<option value="{{ b['id'] }}">{{ b['title'] }} ({{ b['quantity'] }})</option>{% endfor %}
+      </select>
+    </div>
+    <div class="mb-3"><label>Student</label>
+      <select class="form-select" name="student_id" required>
+        {% for s in students %}<option value="{{ s['id'] }}">{{ s['name'] }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="mb-3"><label>Due days</label><input class="form-control" name="due_days" type="number" value="14"></div>
+    <button class="btn btn-primary">Issue</button>
+  </form>
+{% endblock %}

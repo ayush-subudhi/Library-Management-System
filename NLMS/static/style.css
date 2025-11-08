@@ -1,0 +1,113 @@
+
+/* Light Neumorphism Theme */
+body {
+  background: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding-bottom: 40px;
+}
+
+/* Navbar */
+.navbar {
+  background: #e0e0e0 !important;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+  border-radius: 12px;
+  margin: 10px auto 25px;
+  max-width: 95%;
+}
+.navbar-brand, .nav-link {
+  color: #333 !important;
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #555 !important;
+}
+
+/* Cards */
+.card {
+  background: #e0e0e0;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
+  transition: all 0.2s ease;
+}
+.btn:active {
+  box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+}
+.btn-primary {
+  background: #d6d6d6;
+  color: #333;
+}
+.btn-primary:hover {
+  background: #c0c0c0;
+}
+.btn-success {
+  background: #d8d8d8;
+  color: #333;
+}
+.btn-success:hover {
+  background: #bfbfbf;
+}
+.btn-outline-danger {
+  color: #a33;
+  border: 1px solid #a33;
+  background: #e0e0e0;
+}
+.btn-outline-danger:hover {
+  background: #a33;
+  color: #fff;
+}
+
+/* Tables */
+.table {
+  background: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+  overflow: hidden;
+}
+.table th, .table td {
+  vertical-align: middle;
+}
+
+/* Inputs */
+input, select {
+  background: #e0e0e0 !important;
+  border: none !important;
+  box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+input:focus, select:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
+}
+
+/* Modal */
+.modal-content {
+  background: #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 12px;
+  box-shadow: 2px 2px 4px #bebebe, -2px -2px 4px #ffffff;
+  border: none;
+}
+
+/* Headings */
+h3, h5 {
+  text-shadow: 1px 1px 1px #fff;
+}

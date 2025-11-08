@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Students</h3>
+    <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#addStudentModal">Add Student</button>
+  </div>
+  <table class="table table-striped">
+    <thead><tr><th>ID</th><th>Name</th><th>Roll</th><th>Actions</th></tr></thead>
+    <tbody>
+      {% for s in students %}
+      <tr><td>{{ s['id'] }}</td><td>{{ s['name'] }}</td><td>{{ s['roll'] }}</td><td><form method='post' action='{{ url_for('delete_student', student_id=s['id']) }}' style='display:inline;'><button class='btn btn-sm btn-outline-danger'>Delete</button></form></td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addStudentModal" tabindex="-1">
+    <div class="modal-dialog">
+      <form method="post" action="{{ url_for('add_student') }}" class="modal-content">
+        <div class="modal-header"><h5 class="modal-title">Add Student</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body">
+          <div class="mb-3"><label>Name</label><input class="form-control" name="name" required></div>
+          <div class="mb-3"><label>Roll</label><input class="form-control" name="roll"></div>
+        </div>
+        <div class="modal-footer"><button class="btn btn-primary">Save</button></div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
